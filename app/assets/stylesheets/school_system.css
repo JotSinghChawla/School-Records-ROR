@@ -1,0 +1,42 @@
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 18px;
+  color: #6c757d;
+  line-height: 1.5;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  background-color: #ddd !important;
+}
+
+.right_side {
+  position: absolute;
+  width: 30vw;
+  flex-direction: column;
+  top: 0;
+  right: 0;
+  font-size: 25px;
+  background-image: url("bg.jpg");
+  /* background: black; */
+  height: 100vh;
+  justify-content: space-evenly;
+  align-content: center;
+  text-align: center;
+}
+
+.nav-link {
+  color: rebeccapurple !important;
+  border: 1px solid rebeccapurple;
+  border-radius: 10px;
+  padding: 20px !important;
+}
+
+.left_side {
+  max-width: 70vw;
+  position: absolute;
+}
+
+a:hover {
+  background-color: honeydew;
+  color: black !important;
+}
