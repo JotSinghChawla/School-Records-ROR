@@ -23,7 +23,7 @@
         <td><%= student.marks1 %></td>
         <td><%= student.marks2 %></td>
         <td><%= student.marks3 %></td>
-        <td><%= student.student_class %></td>
+        <td><%= student.student_class.class_number %></td>
         <td><%= link_to 'Show', student %></td>
         <td><%= link_to 'Edit', edit_student_path(student) %></td>
         <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
