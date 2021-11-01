@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: 'main#index'
 
   # resources :students
   resources :student_classes
