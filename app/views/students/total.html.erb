@@ -5,7 +5,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th class="scope">ID</th>
+      <th class="scope">Roll Number</th>
       <th class="scope">Name</th>
       <th class="scope">Age</th>
       <th class="scope">Student class</th>
@@ -17,7 +17,7 @@
   <tbody>
     <% @students.each do |student| %>
       <tr>
-        <th scope="row"><%= student.id %></th>
+        <th scope="row"><%= student.rollnumber %></th>
         <td><%= student.name %></td>
         <td><%= student.age %></td>
         <td><%= student.student_class.class_number %></td>

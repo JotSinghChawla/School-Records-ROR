@@ -5,6 +5,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
+      <th>Roll Number</th>
       <th>Name</th>
       <th>Age</th>
       <th>Marks1</th>
@@ -18,7 +19,8 @@
   <tbody>
     <% @students.each do |student| %>
       <tr>
-        <th><%= student.name %></th>
+        <th><%= student.rollnumber %></th>
+        <td><%= student.name %></td>
         <td><%= student.age %></td>
         <td><%= student.marks1 %></td>
         <td><%= student.marks2 %></td>
