@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_31_210823) do
+ActiveRecord::Schema.define(version: 2021_11_01_023324) do
 
   create_table "student_classes", force: :cascade do |t|
     t.integer "class_number"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2021_10_31_210823) do
     t.integer "student_class_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "rollnumber"
     t.index ["student_class_id"], name: "index_students_on_student_class_id"
   end
 
