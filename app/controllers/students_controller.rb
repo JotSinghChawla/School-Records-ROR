@@ -5,6 +5,10 @@ class StudentsController < ApplicationController
   def index
     @students = Student.all
   end
+  
+  def total
+    @students = Student.all
+  end
 
   # GET /students/1 or /students/1.json
   def show
