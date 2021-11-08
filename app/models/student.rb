@@ -1,10 +1,16 @@
 class Student < ApplicationRecord
+
+  self.per_page = 5
+
   belongs_to :student_class
 
   validates :name, :rollnumber, :age, :marks1, :marks2, :marks3, :student_class_id, presence: true
   validates :rollnumber, uniqueness: { message: ": This rollnumber already exists" }
-  # validates :rollnumber , length: { minimum: 1, maximum: 10000, message: ": Rollnumber should be smaller than 10000" }
-  validates :rollnumber, length: { in: 1..10000 }               # Not working
+  validates :rollnumber, numericality: true
+
+  validates :rollnumber , length: { minimum: 1, maximum: 10000, message: ": Rollnumber should be smaller than 10000" }
+  # validates :rollnumber, length: { in: 1..10000 }               # Not working
+  validates :rollnumber, inclusion: { in: 1..10000, message: ": Rollnumber should be smaller than 10000" }
   validates :marks1, :marks2, :marks3, numericality: { greater_than_or_equal_to: 0, less_than_or_equal_to: 100 }
 
   before_save :update_before_save
@@ -19,3 +25,8 @@ class Student < ApplicationRecord
   end
 
 end
+
+
+# Query Interface to fill roll number column
+# Student.find_by_sql("UPDATE students SET rollnumber = abs(random() % 10000)")
+
